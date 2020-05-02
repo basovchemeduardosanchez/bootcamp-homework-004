@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>CSS QUEST</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div clas="row">
+                <div class="col">
+                    <a class="navbar-brand" href="scores.html">View Highscores</a>
+                </div>
+                <div class="col">
+                    <div class="alert alert-success d-none" id="correct-alert" role="alert">
+                        CORRECT! 
+                    </div>
+                    <div class="alert alert-danger d-none" id="incorrect-alert" role="alert">
+                        INCORRECT! 
+                    </div>
+                </div>
+                <div class="col text-right">
+                    <h1 class="time"></h1>
+                    <div id="main"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- SECTION QUESTIONS -->
+            <section class="left-box">
+                <h3>Selectors Challenge</h3>
+                <p>You must select the correct lines that will be affected by the current selector, once you have selected
+                    you will sumbit your answer and get a score you have five minutes to complete the challenge</p>
+                <section>
+                    <h4>CHALLENGE: Select all the lines that will be affectes by the following selector</h4>
+                    <h4 id="Q1-4-header">First-child sample</h4>
+                    <label id="Q1"><input disabled type="checkbox" id="cbox1" value="first_checkbox">
+                        article:first-child</label><br>
+                    <label id="Q2" class="d-none"><input disabled type="checkbox" id="cbox2" value="first_checkbox">
+                        article⌴:first-child</label><br>
+                    <label id="Q3" class="d-none"><input disabled type="checkbox" id="cbox3" value="first_checkbox">
+                        div:first-child</label><br>
+                    <label id="Q4" class="d-none"><input disabled type="checkbox" id="cbox4" value="first_checkbox">
+                        div⌴:first-child</label><br>
+                    <h4 id="Q5-header" class="d-none">only-child sample</h4>
+                    <label id="Q5" class="d-none"><input disabled type="checkbox" id="cbox5" value="first_checkbox">
+                        article:only-child</label><br>
+                </section>
+                <br>
+                <br>
+                <section>
+                    <article>
+                        <div>FIRST CHILD OF ARTICLE
+                            <p>&emsp;&emsp;&emsp;&emsp;FIRST DIV CHILD</p>
+                        </div>
+                        <div id="2ndDiv">SECOND CHILD OF ARTICLE</div>
+                    </article>
+                </section>
+            </section>
+            <!-- !SECTION QUESTIONS -->
+            <section class="right-box">
+                <table class="code-table">
+                    <tr>
+                        <th>X</th>
+                        <th><code>&lt;Code&gt; Code Lines &lt;/code&gt;</code></th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox1" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox2" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox3" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox4" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox5" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox6" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox7" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox8" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox9" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox10" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox11" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox12" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox13" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox14" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox15" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox16" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox17" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox18" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox19" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox20" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox21" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox22" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="ansbox23" value="first_checkbox"></td>
+                        <td class="code-line"></td>
+                    </tr>
+                </table>
+                <b>
+                    <pre>
+            <nav>&lt;section&gt;<article>&emsp;&lt;article id="1stArticle"&gt;<div>&emsp;&emsp;&emsp;&lt;div id="1stDiv"&gt; FIRST CHILD OF ARTICLE
+        <span>&lt;span&gt;FIRST DIV CHILD&lt;/span&gt;</span>
+        &lt;/div&gt;</div><div>&emsp;&emsp;&emsp;&lt;div id="2ndDiv"&gt;SECOND CHILD OF ARTICLE&lt;/div&gt;</div>&emsp;&emsp;&lt;/article &gt;</article></nav>&lt;/section &gt;</nav>
+            <nav>&lt;section&gt;<article>&emsp;&lt;article id="2ndArticle"&gt;<div>&emsp;&emsp;&emsp;&lt;div id="3rdDiv"&gt; FIRST CHILD OF SECOND ARTICLE
+        <span>&lt;span&gt;FIRST DIV CHILD 2ND ARTICLE&lt;/span&gt;</span>
+        &lt;/div&gt;</div><div>&emsp;&emsp;&emsp;&lt;div id="2ndDiv"&gt;SECOND CHILD OF 2ND ARTICLE&lt;/div&gt;</div>&emsp;&emsp;&lt;/article &gt;</article><article>&emsp;&lt;article id="3rdtArticle"&gt;<div>&emsp;&emsp;&emsp;&lt;div id="1stDiv"&gt; FIRST CHILD OF 3RD ARTICLE
+        <span>&lt;span&gt;FIRST DIV CHILD OF 3RD ARTICLE&lt;/span&gt;</span>
+        &lt;/div&gt;</div><div>&emsp;&emsp;&emsp;&lt;div id="2ndDiv"&gt;SECOND CHILD OF ARTICLE&lt;/div&gt;</div>&emsp;&emsp;&lt;/article &gt;</article></nav>&lt;/section &gt;</nav>
+            </pre>
+                </b>
+                </nav>
+                <button id="submit" type="button" class="btn btn-primary">SUBMIT</button>
+                <p id="article-first-child"><b><code style="font-size:20px;">article:first-child</code></b> will select the
+                    first article child of an element </p>
+                <p id="article_-first-child"><b><code style="font-size:20px;">article⌴:first-child</code></b> will select
+                    the first child of an article element </p>
+                <p id="div-first-child"><b><code style="font-size:20px;">div:first-child</code></b> will select the first
+                    div child of an article element </p>
+                <p id="div_-first-child"><b><code style="font-size:20px;">div⌴:first-child</code></b> will select the first
+                    element child of a div element </p>
+                <p id="span-only-child"><b><code style="font-size:20px;">span:only-child</code></b> will select the first
+                    element child of a div element </p>
+            </section>
+            <section>
+            </section>
+        </div>
+        <!-- YOUR CODE GOES ABOVE THIS LINE -->
+        <!-- Optional JavaScript -->
+        <script src="js/script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

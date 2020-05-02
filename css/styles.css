@@ -1,0 +1,68 @@
+/* Selecciona cualquier <p> que sea el primer 
+   elemento entre sus hermanos */
+/*This makes all the dimensions of the elements to be calculated up to tbe border on the box model, instead only the content*/
+*, *:before, *:after{
+    box-sizing:border-box;
+  }
+  body{
+    margin:20px;
+  }
+  .top-panel{
+    height:200px;
+    width:1000px;
+    border:1px solid black;
+    border-bottom:none;
+  }
+  
+  .right-box{
+    float:left;
+    border: 1px solid black;
+    z-index:-1;
+    border-left: none;
+    width: 650px;
+    height:650px;
+    padding:30px;
+    position:relative;
+    
+    
+  }
+  .left-box{
+    float:left;
+    border: 1px solid black;
+    width: 350px;
+    height:650px;
+    padding:30px;
+    
+  }
+  
+  #article-first-child,
+  #article_-first-child,
+  #div-first-child,
+  #span-only-child,
+  #div_-first-child{
+    display:none;
+  }
+  .code-table tr:nth-child(odd) td {
+    background-color: lightgray;
+  }
+  .code-table tr:nth-child(even) td {
+    background-color: grey;
+  }
+  .code-table{
+    width:100%;
+    position:absolute;
+    z-index:-1;
+    margin-left:-28px;
+    margin-top:-2px;
+    border-collapse: collapse;
+  }
+  .code-table td:first-child{
+    text-align:center;
+  }
+  .code-table th:first-child{
+    width:20px;
+  }
+  .code-table tr{
+    line-height: 19.7px;
+  }
+   

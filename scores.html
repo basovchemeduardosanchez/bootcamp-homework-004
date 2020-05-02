@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Scores</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="scores.html">View Highscores</a>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">CSS CHALLENGE</h1>
+                <table id="high-scores">
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </table>
+                <input type="text" id="score-name" placeholder="name">
+                <a id="save-score" class="btn btn-primary btn-lg" href="#" role="button">Save Score</a>
+              </div>
+        </div>
+        <!-- YOUR CODE GOES ABOVE THIS LINE -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script>
+            // SECTION GET VALUES FROM LOCAL STORAGE
+            // We parse this variable because it's an array
+            var scores = localStorage.getItem("scores");
+            if (scores === null){
+                scores = [];
+            }else{
+                scores = JSON.parse(scores);
+            }
+            // !SECTION GET VALUES FROM LOCAL STORAGE
+            // SECTION TABLE CONSTRUCTOR
+                for (var i =0; i < scores.length; i++){
+                    var table = document.querySelector("#high-scores");
+                    var tr = document.createElement("tr");
+                    var tdname = document.createElement("td");
+                    tdname.textContent = scores[i].name;
+                    var score = document.createElement("td");
+                    score.textContent = scores[i].score;
+                    tr.appendChild(tdname);
+                    tr.appendChild(score);
+                    table.appendChild(tr);
+                }
+            // !SECTION TABLE CONSTRUCTOR 
+            
+        var saveScore = document.querySelector("#save-score");
+        saveScore.addEventListener('click',function(){
+            // SECTION GET VALUES FROM LOCAL STORAGE
+            var currentScore = localStorage.getItem("currentScore");
+            // !SECTION  GET VALUES FROM LOCAL STORAGE
+            // Save data in the array 
+            scores.push({
+                //name: is the key 
+                //document.querySelector("#score-name").value is the value of the input 
+                name: document.querySelector("#score-name").value,
+                // Retrieve the data from local storage
+                score: currentScore
+            });
+            saveScore.setAttribute("disabled","");
+            saveScore.classList.add("disabled");
+            // SECTION PRINT TABLE
+            var table = document.querySelector("#high-scores");
+            var tr = document.createElement("tr");
+            var tdname = document.createElement("td");
+            tdname.textContent = scores[scores.length-1].name;
+            var score = document.createElement("td");
+            score.textContent = scores[scores.length-1].score;
+            tr.appendChild(tdname);
+            tr.appendChild(score);
+            table.appendChild(tr);
+             // !SECTION PRINT TABLE
+            // TODO: THIS IS LOCAL STORAGE DOCUMENT THIS SHIT
+            localStorage.setItem("scores",JSON.stringify(scores));
+        })
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
